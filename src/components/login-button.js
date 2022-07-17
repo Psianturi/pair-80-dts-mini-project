@@ -4,14 +4,18 @@ import Button from '@mui/material/Button';
 
 
 const LoginButton = () => {
-  const { loginWithRedirect } = useAuth0();
+  const { loginWithRedirect, isAuthenticated } = useAuth0();
   return (
+    !isAuthenticated && (
     <Button
+      size='medium'
+      color='primary'
       className="btn btn-primary btn-block"
       onClick={() => loginWithRedirect()}
     >
       Log In
     </Button>
+    )
   );
 };
 
