@@ -18,6 +18,7 @@ class Routes extends Component {
                         <ProtectedRoute path="/film" component={Film} />
                         <ProtectedRoute path="/actor" component={Actor} />
                     </Switch>
+                    <Footer />
                 </div>
             </Router>
         );
