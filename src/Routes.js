@@ -5,6 +5,7 @@ import Home from './component/Home';
 import Film from './component/Film';
 import Actor from './component/Actor';
 import ProtectedRoute from './auth/protected-route';
+import Footer from './component/Footer';
 class Routes extends Component {
 
     render() {
@@ -18,6 +19,7 @@ class Routes extends Component {
                         <ProtectedRoute path="/film" component={Film} />
                         <ProtectedRoute path="/actor" component={Actor} />
                     </Switch>
+                    <Footer />
                 </div>
             </Router>
         );
