@@ -29,7 +29,7 @@ class Actor extends Component {
     };
 
     getDataActor = () => {
-        axios.get(`http://api.tvmaze.com/search/people?q=b`)
+        axios.get(`https://api.tvmaze.com/shows/1/cast`)
             .then((res) => {
                 this.setState({
                     dataActor: res.data
@@ -37,7 +37,7 @@ class Actor extends Component {
             })
     };
 
-  
+
 
     componentDidMount = () => {
         this.getDataActor();
@@ -46,28 +46,28 @@ class Actor extends Component {
     render() {
         return (
             <div>
-      <Carousel autoPlay centerMode centerSlidePercentage={40} showStatus={false}>
-                            {this.state.dataActor.map((data, key) => {
-                                var gambar = { ...data.person.image };
-                                if (data.person.image === null) {
-                                    gambar = "https://cdn.pixabay.com/photo/2016/11/15/07/09/photo-manipulation-1825450__480.jpg"
-                                } else {
-                                    gambar = gambar.original;
-                                }
-                                return (
-                                    <div key={key}>
-                                        <img alt="" src={gambar} style={{height: "auto", width:"40%"}}/>
-                                        <h2 className="legend">{data.person.name}</h2>
-                                    </div>
-                                )
-                            })}
-                        </Carousel>
+                <Carousel autoPlay centerMode centerSlidePercentage={40} showStatus={false}>
+                    {this.state.dataActor.map((data, key) => {
+                        var gambar = { ...data.person.image };
+                        if (data.person.image === null) {
+                            gambar = "https://cdn.pixabay.com/photo/2016/11/15/07/09/photo-manipulation-1825450__480.jpg"
+                        } else {
+                            gambar = gambar.original;
+                        }
+                        return (
+                            <div key={key}>
+                                <img alt="" src={gambar} style={{ height: "auto", width: "40%" }} />
+                                <h2 className="legend">{data.person.name}</h2>
+                            </div>
+                        )
+                    })}
+                </Carousel>
                 <Grid style={{ marginTop: 20 }}>
                     <Grid.Column width={4}>
-                            <Image src='https://cdn.pixabay.com/photo/2015/03/26/09/43/lenses-690179__480.jpg' />
-                            <Image style={{ marginTop: 20 }} src='https://cdn.pixabay.com/photo/2015/03/26/09/43/lenses-690179__480.jpg' />
-                            <Image style={{ marginTop: 20 }} src='https://cdn.pixabay.com/photo/2015/03/26/09/43/lenses-690179__480.jpg' />
-                       
+                        <Image src='https://d1fdloi71mui9q.cloudfront.net/CS0J5lcYRV2VV10HclG3_pv21Q1fwGC1QUQx2' />
+                        <Image style={{ marginTop: 20 }} src='https://d1fdloi71mui9q.cloudfront.net/CS0J5lcYRV2VV10HclG3_pv21Q1fwGC1QUQx2' />
+                        <Image style={{ marginTop: 20 }} src='https://d1fdloi71mui9q.cloudfront.net/CS0J5lcYRV2VV10HclG3_pv21Q1fwGC1QUQx2' />
+
                     </Grid.Column>
                     <Grid.Column width={12}>
                         <Input onChange={(e) => { this.pencarian(e) }} icon={{ name: "search", circular: true, link: true }} placeholder="Search..." />
@@ -113,4 +113,4 @@ const mapDispatchtoProps = dispatch => {
 
 
 
-export default connect(null,mapDispatchtoProps) (Actor);
+export default connect(null, mapDispatchtoProps)(Actor);
