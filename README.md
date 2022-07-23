@@ -13,3 +13,16 @@ Contoh: `pair-03-dts-mini-project`
 ## Branching, commit
 
 Branch dapat sesuai dengan kebutuhan dan kesepakatan bersama dalam pair, namun hasil akhirnya harus di merge ke branch `main`.
+
+<br>
+
+### Hasil Deploy sebagai berikut:
+
+![gambar](https://user-images.githubusercontent.com/42699234/180591689-efe4b7d3-46e6-455c-8379-74a56079f926.png)
+
+<br>
+
+![gambar](https://user-images.githubusercontent.com/42699234/180591715-3fcc7f14-7a7e-4311-9a53-10b295c974cf.png)
+
+
+
