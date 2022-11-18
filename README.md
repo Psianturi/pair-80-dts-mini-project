@@ -24,5 +24,5 @@ Branch dapat sesuai dengan kebutuhan dan kesepakatan bersama dalam pair, namun h
 
 ![gambar](https://user-images.githubusercontent.com/42699234/180591715-3fcc7f14-7a7e-4311-9a53-10b295c974cf.png)
 
-
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
