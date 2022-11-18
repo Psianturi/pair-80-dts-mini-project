@@ -4,13 +4,11 @@ import { Segment } from "semantic-ui-react";
 const Footer = () => {
   return (
     <Segment inverted color="blue" textAlign="center">
-      <h3>MINI PROJECT PAIR-80 DTSREA2A &#169;2022{" "} </h3>
+      <h3>MINI PROJECT PAIR-80 DTSREA2A &#169;2022 </h3>
       <br></br>
-      https://github.com/Psianturi{" "}
-      <br></br>
+      https://github.com/Psianturi <br></br>
       https://github.com/anggaraigo{" "}
     </Segment>
-    
   );
 };
 
